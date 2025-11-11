@@ -1,28 +1,31 @@
 # Repository Migration Guide
 
-This guide walks you through migrating the Weather MCP project to the GitHub organization with three separate repositories.
+This guide walks you through migrating the Weather MCP project to the GitHub organization with separate repositories.
 
 ## Overview
 
-**Goal:** Transition from a single repository (`dgahagan/weather-mcp`) to three independent repositories under the `weather-mcp` organization.
+**Goal:** Transition from a single repository (`dgahagan/weather-mcp`) to four independent repositories under the `weather-mcp` organization.
 
 **Repositories:**
-- `weather-mcp/mcp-server` (existing repo, transferred)
-- `weather-mcp/analytics-server` (new repo)
-- `weather-mcp/website` (new repo)
+- `weather-mcp/weather-mcp` (existing repo, transferred) - MCP server
+- `weather-mcp/analytics-server` (new repo) - Analytics backend
+- `weather-mcp/website` (new repo) - Public website and dashboard
+- `weather-mcp/.github` (new repo) - Organization profile and shared docs
 
 ---
 
 ## Prerequisites
 
 - [x] GitHub organization created: [weather-mcp](https://github.com/weather-mcp)
-- [ ] Write access to the organization
-- [ ] Git installed locally
-- [ ] GitHub CLI (optional, but recommended): `gh` command
+- [x] Write access to the organization
+- [x] Git installed locally
+- [x] GitHub CLI: `gh` command (recommended and used)
 
 ---
 
-## Phase 1: Transfer MCP Server Repository
+## Phase 1: Transfer MCP Server Repository ✅ COMPLETED
+
+> **Status:** Completed - Repository transferred to `weather-mcp/weather-mcp`
 
 ### Step 1: Transfer Repository on GitHub
 
@@ -82,7 +85,9 @@ git status
 
 ---
 
-## Phase 2: Create Analytics Server Repository
+## Phase 2: Create Analytics Server Repository ✅ COMPLETED
+
+> **Status:** Completed - Repository created at `weather-mcp/analytics-server` using gh CLI
 
 ### Step 1: Initialize Git Repository Locally
 
@@ -201,7 +206,9 @@ On GitHub (https://github.com/weather-mcp/analytics-server):
 
 ---
 
-## Phase 3: Create Website Repository
+## Phase 3: Create Website Repository ✅ COMPLETED
+
+> **Status:** Completed - Repository created at `weather-mcp/website` using gh CLI
 
 ### Step 1: Initialize Git Repository Locally
 
@@ -316,65 +323,101 @@ On GitHub (https://github.com/weather-mcp/website):
 
 ---
 
-## Phase 4: Create Organization Profile
+## Phase 4: Create Organization Profile ✅ COMPLETED
 
-### Step 1: Create .github Repository
+> **Status:** Completed - Created `.github` repo in workspace using gh CLI
 
-This special repository displays on the organization profile page.
+This special repository displays on the organization profile page at https://github.com/weather-mcp.
 
-**Using GitHub Web Interface:**
+### Implementation Notes
 
-1. Go to: https://github.com/organizations/weather-mcp/repositories/new
+We streamlined this phase by:
+1. Using `gh` CLI to create and clone in one command
+2. Creating the `.github` folder directly in the workspace alongside other repos
+3. Adding organization documentation (profile README and migration guide)
 
-2. Fill in the details:
-   - **Repository name:** `.github` (exactly as shown)
-   - **Description:** `Organization profile and shared resources`
-   - **Visibility:** Public
-   - **Initialize with:** ✅ README
+### Step 1: Create and Clone .github Repository
 
-3. Click **"Create repository"**
+**Using GitHub CLI (Streamlined Approach):**
+
+```bash
+cd /home/dgahagan/work/personal/weather-mcp
+
+# Create repo and clone it in one command
+gh repo create weather-mcp/.github \
+  --public \
+  --description "Organization profile and shared resources" \
+  --clone
+
+# This creates:
+# - Repository at github.com/weather-mcp/.github
+# - Local folder at .github/ in your workspace
+```
 
 ### Step 2: Add Organization Profile README
 
-1. **Clone the .github repository:**
-   ```bash
-   cd /home/dgahagan/work/personal/weather-mcp
-   git clone git@github.com:weather-mcp/.github.git
-   cd .github
-   ```
+```bash
+cd .github
 
-2. **Copy the organization profile README:**
-   ```bash
-   cp ../docs/ORGANIZATION_PROFILE_README.md ./profile/README.md
+# Create profile directory and add README
+mkdir -p profile
+cp ../docs/ORGANIZATION_PROFILE_README.md ./profile/README.md
 
-   # Or if profile directory doesn't exist:
-   mkdir -p profile
-   cp ../docs/ORGANIZATION_PROFILE_README.md ./profile/README.md
-   ```
+# Set branch to main and commit
+git branch -M main
+git add profile/README.md
+git commit -m "Add organization profile README
 
-3. **Commit and push:**
-   ```bash
-   git add profile/README.md
-   git commit -m "Add organization profile README
+- Project overview and feature highlights
+- Links to all repositories
+- Quick start guide
+- Community resources
+- Contributing guidelines
+- Live stats and badges
 
-   - Project overview and feature highlights
-   - Links to all three repositories
-   - Quick start guide
-   - Community resources
-   - Contributing guidelines
-   - Live stats and badges
+🤖 Generated with Claude Code
+Co-Authored-By: Claude <noreply@anthropic.com>"
 
-   🤖 Generated with Claude Code
-   Co-Authored-By: Claude <noreply@anthropic.com>"
+git push -u origin main
+```
 
-   git push origin main
-   ```
+### Step 3: Add Organization Documentation
 
-4. **Verify:** Visit https://github.com/weather-mcp to see the profile README
+```bash
+# Add migration guide to .github repo
+mkdir -p docs
+cp ../docs/REPOSITORY_MIGRATION_GUIDE.md ./docs/
 
-### Step 3: Add Organization Description
+git add docs/
+git commit -m "Add organization documentation"
+git push
+```
 
-On GitHub:
+### Step 4: Update Workspace Structure
+
+After creating `.github` repo, update workspace `.gitignore`:
+
+```bash
+cd /home/dgahagan/work/personal/weather-mcp
+
+# Update .gitignore to include .github/ folder
+echo ".github/" >> .gitignore
+```
+
+Final workspace structure:
+```
+weather-mcp/                    (workspace - NO git)
+├── weather-mcp/               → github.com/weather-mcp/weather-mcp
+├── analytics-server/          → github.com/weather-mcp/analytics-server
+├── website/                   → github.com/weather-mcp/website
+├── .github/                   → github.com/weather-mcp/.github
+├── .gitignore                 (protects workspace)
+└── README.md                  (local workspace guide)
+```
+
+### Step 5: Add Organization Description (Optional)
+
+On GitHub, you can optionally add more organization metadata:
 
 1. Go to: https://github.com/settings/organizations
 2. Select `weather-mcp`
@@ -386,7 +429,7 @@ On GitHub:
    - **Website:** https://weather-mcp.dev
    - **Twitter:** @weather_mcp (if you have one)
 
-**✅ Checkpoint:** The organization profile should now display with a README and all project links.
+**✅ Checkpoint:** The organization profile at https://github.com/weather-mcp now displays the profile README and all project links!
 
 ---
 
@@ -519,38 +562,40 @@ Thanks for being part of the Weather MCP community! ☀️
 Before considering the migration complete, verify:
 
 ### MCP Server Repository
-- [ ] Repository transferred to `weather-mcp/mcp-server`
-- [ ] Local git remote updated
-- [ ] Can push and pull successfully
-- [ ] All URLs in code/docs updated
-- [ ] GitHub Actions still working (if any)
-- [ ] npm package links work
+- [x] Repository transferred to `weather-mcp/weather-mcp`
+- [x] Local git remote updated
+- [x] Can push and pull successfully
+- [ ] All URLs in code/docs updated (Phase 5)
+- [ ] GitHub Actions still working (if any) (Phase 5)
+- [ ] npm package links work (Phase 6)
 
 ### Analytics Server Repository
-- [ ] Repository created at `weather-mcp/analytics-server`
-- [ ] Initial commit pushed
-- [ ] Repository settings configured
-- [ ] Topics and description added
-- [ ] README displays correctly
+- [x] Repository created at `weather-mcp/analytics-server`
+- [x] Initial commit pushed
+- [x] Repository settings configured
+- [x] Topics and description added
+- [x] README displays correctly
 
 ### Website Repository
-- [ ] Repository created at `weather-mcp/website`
-- [ ] Initial commit pushed
-- [ ] Repository settings configured
-- [ ] Topics and description added
-- [ ] README displays correctly
+- [x] Repository created at `weather-mcp/website`
+- [x] Initial commit pushed
+- [x] Repository settings configured
+- [x] Topics and description added
+- [x] README displays correctly
 
 ### Organization Profile
-- [ ] `.github` repository created
-- [ ] Organization README displays
-- [ ] Organization description set
-- [ ] Links to all repos work
+- [x] `.github` repository created
+- [x] Organization README displays at https://github.com/weather-mcp
+- [x] Migration guide added to `.github/docs/`
+- [x] Workspace structure updated with `.github/` folder
+- [ ] Organization description set (optional)
+- [x] Links to all repos work
 
 ### External Services
-- [ ] npm package updated (if published)
-- [ ] Smithery registry updated (if registered)
-- [ ] GitHub Actions secrets re-added
-- [ ] Old URLs redirect correctly
+- [ ] npm package updated (if published) (Phase 6)
+- [ ] Smithery registry updated (if registered) (Phase 6)
+- [ ] GitHub Actions secrets re-added (Phase 6)
+- [ ] Old URLs redirect correctly (verify in Phase 5)
 
 ---
 
@@ -674,5 +719,19 @@ If you encounter issues:
 
 ---
 
+## Migration Progress
+
+**✅ Phases 1-4 Completed!**
+
+- ✅ Phase 1: MCP Server Repository transferred to `weather-mcp/weather-mcp`
+- ✅ Phase 2: Analytics Server Repository created
+- ✅ Phase 3: Website Repository created
+- ✅ Phase 4: Organization Profile created (`.github` repo)
+- ⏳ Phase 5: Update Cross-Repository References (next)
+- ⏳ Phase 6: Update External Services
+- ⏳ Phase 7: Announce Migration
+
+---
+
 **Last Updated:** 2025-11-11
-**Document Version:** 1.0
+**Document Version:** 1.1 (Updated with completion status)
