@@ -6,7 +6,7 @@ Open-source weather data ecosystem for Claude Desktop and AI assistants.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Stars](https://img.shields.io/github/stars/weather-mcp?style=social)](https://github.com/weather-mcp)
-[![Discord](https://img.shields.io/badge/Discord-Join-7289DA?logo=discord&logoColor=white)](https://discord.gg/weather-mcp)
+[![Discord](https://img.shields.io/badge/Discord-Join-7289DA?logo=discord&logoColor=white)](https://discord.gg/SEBvEa3YXr)
 
 [Website](https://weather-mcp.dev) • [Dashboard](https://weather-mcp.dev/dashboard) • [Documentation](https://weather-mcp.dev/docs) • [Community](https://github.com/weather-mcp/mcp-server/discussions)
 
@@ -228,13 +228,13 @@ We welcome contributions to any Weather MCP project!
 ### Join the Weather MCP Community
 
 [![GitHub Discussions](https://img.shields.io/badge/GitHub-Discussions-181717?logo=github)](https://github.com/weather-mcp/mcp-server/discussions)
-[![Discord](https://img.shields.io/badge/Discord-Join%20Server-7289DA?logo=discord&logoColor=white)](https://discord.gg/weather-mcp)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Server-7289DA?logo=discord&logoColor=white)](https://discord.gg/SEBvEa3YXr)
 [![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?logo=twitter&logoColor=white)](https://twitter.com/weather_mcp)
 
 </div>
 
 - **[GitHub Discussions](https://github.com/weather-mcp/mcp-server/discussions)** - Ask questions, share ideas
-- **[Discord Server](https://discord.gg/weather-mcp)** - Real-time chat with the community
+- **[Discord Server](https://discord.gg/SEBvEa3YXr)** - Real-time chat with the community
 - **[Twitter](https://twitter.com/weather_mcp)** - Updates and announcements
 - **[Community Showcase](https://weather-mcp.dev/community/showcase)** - See what others are building
 
