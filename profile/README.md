@@ -8,7 +8,9 @@ Open-source weather data ecosystem for Claude Desktop and AI assistants.
 [![GitHub Stars](https://img.shields.io/github/stars/weather-mcp?style=social)](https://github.com/weather-mcp)
 [![Discord](https://img.shields.io/badge/Discord-Join-7289DA?logo=discord&logoColor=white)](https://discord.gg/SEBvEa3YXr)
 
-[Website](https://weather-mcp.dev) • [Dashboard](https://weather-mcp.dev/dashboard) • [Documentation](https://weather-mcp.dev/docs) • [Community](https://github.com/weather-mcp/mcp-server/discussions)
+[MCP Server](https://github.com/weather-mcp/weather-mcp) • [Community](https://github.com/weather-mcp/weather-mcp/discussions) • [Discord](https://discord.gg/SEBvEa3YXr)
+
+**Coming Soon:** [Website](https://weather-mcp.dev) • [Dashboard](https://weather-mcp.dev/dashboard) • [Documentation](https://weather-mcp.dev/docs)
 
 </div>
 
@@ -38,13 +40,13 @@ Open-source weather data ecosystem for Claude Desktop and AI assistants.
       <p><strong>Status:</strong> Production (v1.6.1)</p>
       <p>Core MCP server for weather data access</p>
       <p>
-        <a href="https://github.com/weather-mcp/mcp-server">
-          <img src="https://img.shields.io/github/stars/weather-mcp/mcp-server?style=social" alt="Stars">
+        <a href="https://github.com/weather-mcp/weather-mcp">
+          <img src="https://img.shields.io/github/stars/weather-mcp/weather-mcp?style=social" alt="Stars">
         </a>
       </p>
       <p>
-        <a href="https://github.com/weather-mcp/mcp-server">📖 Documentation</a> •
-        <a href="https://github.com/weather-mcp/mcp-server/issues">🐛 Issues</a>
+        <a href="https://github.com/weather-mcp/weather-mcp">📖 Documentation</a> •
+        <a href="https://github.com/weather-mcp/weather-mcp/issues">🐛 Issues</a>
       </p>
     </td>
     <td width="33%" align="center">
@@ -89,7 +91,7 @@ Open-source weather data ecosystem for Claude Desktop and AI assistants.
 npm install -g @dangahagan/weather-mcp
 
 # Or clone and build from source
-git clone https://github.com/weather-mcp/mcp-server.git
+git clone https://github.com/weather-mcp/weather-mcp.git
 cd mcp-server
 npm install
 npm run build
@@ -117,7 +119,7 @@ Ask Claude:
 - "Are there any weather alerts for Miami?"
 - "Show me historical weather data for New York in July 2020"
 
-**[📖 Full Installation Guide →](https://github.com/weather-mcp/mcp-server#installation)**
+**[📖 Full Installation Guide →](https://github.com/weather-mcp/weather-mcp#installation)**
 
 ---
 
@@ -136,7 +138,7 @@ Ask Claude:
 | `search_location` | Location search / geocoding | Global | Open-Meteo |
 | `check_service_status` | API health check | All | All services |
 
-**[📖 Full API Reference →](https://github.com/weather-mcp/mcp-server/tree/main/docs)**
+**[📖 Full API Reference →](https://github.com/weather-mcp/weather-mcp/tree/main/docs)**
 
 ---
 
@@ -150,21 +152,23 @@ Weather MCP respects your privacy:
 - **Open Source** - All code is auditable
 - **Transparent** - Public analytics dashboard showing aggregate usage
 
-**[📖 Privacy Policy →](https://github.com/weather-mcp/mcp-server/blob/main/docs/ANALYTICS_MCP_PLAN.md)**
+**[📖 Privacy Policy →](https://github.com/weather-mcp/weather-mcp/blob/main/docs/ANALYTICS_MCP_PLAN.md)**
 
 ---
 
-## 📊 Live Stats
+## 📊 Live Stats 🚧 Coming Soon
 
 <div align="center">
 
-| Metric | Value |
-|--------|-------|
-| **Total API Calls (24h)** | ![API Calls](https://img.shields.io/badge/dynamic/json?url=https://analytics.weather-mcp.dev/v1/stats/badge&query=$.calls_24h&label=calls&color=blue) |
-| **Success Rate** | ![Success Rate](https://img.shields.io/badge/dynamic/json?url=https://analytics.weather-mcp.dev/v1/stats/badge&query=$.success_rate&label=success&suffix=%25&color=green) |
-| **Active Installations** | ![Active Installs](https://img.shields.io/badge/dynamic/json?url=https://analytics.weather-mcp.dev/v1/stats/badge&query=$.active_installs&label=installs&color=purple) |
+Once the analytics server is deployed, live usage statistics will be available here:
 
-**[📊 View Full Dashboard →](https://weather-mcp.dev/dashboard)**
+| Metric | Status |
+|--------|--------|
+| **Total API Calls (24h)** | Coming Soon |
+| **Success Rate** | Coming Soon |
+| **Active Installations** | Coming Soon |
+
+**[📊 View Full Dashboard →](https://weather-mcp.dev/dashboard)** *(Coming Soon)*
 
 </div>
 
@@ -185,7 +189,7 @@ We welcome contributions to any Weather MCP project!
 ### Getting Started
 
 1. **Choose a project** to contribute to:
-   - [MCP Server](https://github.com/weather-mcp/mcp-server) - Node.js/TypeScript
+   - [MCP Server](https://github.com/weather-mcp/weather-mcp) - Node.js/TypeScript
    - [Analytics Server](https://github.com/weather-mcp/analytics-server) - Fastify/PostgreSQL
    - [Website](https://github.com/weather-mcp/website) - Next.js/React
 
@@ -193,7 +197,7 @@ We welcome contributions to any Weather MCP project!
 
 3. **Fork, code, and submit a PR** following the project's guidelines
 
-**[📖 Contributing Guide →](https://github.com/weather-mcp/mcp-server/blob/main/CONTRIBUTING.md)**
+**[📖 Contributing Guide →](https://github.com/weather-mcp/weather-mcp/blob/main/CONTRIBUTING.md)**
 
 ---
 
@@ -217,7 +221,7 @@ We welcome contributions to any Weather MCP project!
 - 📋 Real-time weather alerts via WebSocket
 - 📋 Community showcase and examples
 
-**[📖 Full Roadmap →](https://github.com/weather-mcp/mcp-server/blob/main/ROADMAP.md)**
+**[📖 Full Roadmap →](https://github.com/weather-mcp/weather-mcp/blob/main/ROADMAP.md)**
 
 ---
 
@@ -227,26 +231,26 @@ We welcome contributions to any Weather MCP project!
 
 ### Join the Weather MCP Community
 
-[![GitHub Discussions](https://img.shields.io/badge/GitHub-Discussions-181717?logo=github)](https://github.com/weather-mcp/mcp-server/discussions)
+[![GitHub Discussions](https://img.shields.io/badge/GitHub-Discussions-181717?logo=github)](https://github.com/weather-mcp/weather-mcp/discussions)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Server-7289DA?logo=discord&logoColor=white)](https://discord.gg/SEBvEa3YXr)
 [![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?logo=twitter&logoColor=white)](https://twitter.com/weather_mcp)
 
 </div>
 
-- **[GitHub Discussions](https://github.com/weather-mcp/mcp-server/discussions)** - Ask questions, share ideas
+- **[GitHub Discussions](https://github.com/weather-mcp/weather-mcp/discussions)** - Ask questions, share ideas
 - **[Discord Server](https://discord.gg/SEBvEa3YXr)** - Real-time chat with the community
 - **[Twitter](https://twitter.com/weather_mcp)** - Updates and announcements
-- **[Community Showcase](https://weather-mcp.dev/community/showcase)** - See what others are building
+- **[Community Showcase](https://weather-mcp.dev/community/showcase)** - See what others are building *(Coming Soon)*
 
 ---
 
 ## 📚 Resources
 
 ### Documentation
-- [MCP Server Documentation](https://github.com/weather-mcp/mcp-server#readme)
-- [API Reference](https://github.com/weather-mcp/mcp-server/tree/main/docs)
-- [Installation Guide](https://github.com/weather-mcp/mcp-server#installation)
-- [Configuration Options](https://github.com/weather-mcp/mcp-server#configuration)
+- [MCP Server Documentation](https://github.com/weather-mcp/weather-mcp#readme)
+- [API Reference](https://github.com/weather-mcp/weather-mcp/tree/main/docs)
+- [Installation Guide](https://github.com/weather-mcp/weather-mcp#installation)
+- [Configuration Options](https://github.com/weather-mcp/weather-mcp#configuration)
 
 ### Developer Resources
 - [Model Context Protocol Spec](https://spec.modelcontextprotocol.io/)
@@ -254,9 +258,9 @@ We welcome contributions to any Weather MCP project!
 - [Open-Meteo API Documentation](https://open-meteo.com/en/docs)
 
 ### Project Information
-- [Security Policy](https://github.com/weather-mcp/mcp-server/blob/main/SECURITY.md)
-- [License (MIT)](https://github.com/weather-mcp/mcp-server/blob/main/LICENSE)
-- [Code of Conduct](https://github.com/weather-mcp/mcp-server/blob/main/CODE_OF_CONDUCT.md)
+- [Security Policy](https://github.com/weather-mcp/weather-mcp/blob/main/SECURITY.md)
+- [License (MIT)](https://github.com/weather-mcp/weather-mcp/blob/main/LICENSE)
+- [Code of Conduct](https://github.com/weather-mcp/weather-mcp/blob/main/CODE_OF_CONDUCT.md)
 
 ---
 
@@ -303,10 +307,12 @@ copies or substantial portions of the Software.
 
 <div align="center">
 
-**Made with ☀️ by [Dan Gahagan](https://github.com/dgahagan) and [contributors](https://github.com/weather-mcp/mcp-server/graphs/contributors)**
+**Made with ☀️ by [Dan Gahagan](https://github.com/dgahagan) and [contributors](https://github.com/weather-mcp/weather-mcp/graphs/contributors)**
 
 ⭐ Star our repos • 🐛 Report bugs • 💡 Suggest features • 🤝 Contribute
 
-[Website](https://weather-mcp.dev) • [Dashboard](https://weather-mcp.dev/dashboard) • [Documentation](https://weather-mcp.dev/docs)
+[MCP Server](https://github.com/weather-mcp/weather-mcp) • [Discussions](https://github.com/weather-mcp/weather-mcp/discussions) • [Discord](https://discord.gg/SEBvEa3YXr)
+
+**Coming Soon:** [Website](https://weather-mcp.dev) • [Dashboard](https://weather-mcp.dev/dashboard) • [Documentation](https://weather-mcp.dev/docs)
 
 </div>
