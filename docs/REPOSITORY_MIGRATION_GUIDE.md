@@ -433,70 +433,83 @@ On GitHub, you can optionally add more organization metadata:
 
 ---
 
-## Phase 5: Update Cross-Repository References
+## Phase 5: Update Cross-Repository References ✅ COMPLETED
 
-### Step 1: Verify All URL Updates
+> **Status:** Completed - All repository URLs updated from `mcp-server` to `weather-mcp`
 
-The following files have been automatically updated:
+### Step 1: Update All Repository URLs
+
+The following files were updated via automated find/replace:
 
 **MCP Server Repository:**
-- ✅ `package.json` - repository URLs
-- ✅ `smithery.yaml` - homepage and repository
+- ✅ `package.json` - repository URLs (homepage, repository, bugs)
+- ✅ `smithery.yaml` - homepage and repository (file later removed)
 - ✅ `README.md` - GitHub badges and links
 - ✅ `SECURITY.md` - issue reporting URLs
 - ✅ `CLAUDE.md` - documentation links
+- ✅ `server.json` - repository references
 - ✅ All files in `docs/` directory
+- ✅ `src/index.ts` and `src/handlers/statusHandler.ts` - code references
+
+**Changes Made:**
+- Updated all `weather-mcp/mcp-server` → `weather-mcp/weather-mcp`
+- Total: 51 replacements across 15 files
+- Commit: `1de500f`
 
 **Analytics Server:**
-- ✅ `README.md` - links to other repos
+- ✅ Already using correct URLs
 
 **Website:**
-- ✅ `README.md` - links to other repos
+- ✅ Already using correct URLs
 
 **Root Workspace:**
-- ✅ `README.md` - updated with new repo structure
+- ✅ Already updated
 
 ### Step 2: Test All Links
 
-Manually verify key links work:
+All repository links verified and working:
 
-- [ ] https://github.com/weather-mcp
-- [ ] https://github.com/weather-mcp/mcp-server
-- [ ] https://github.com/weather-mcp/analytics-server
-- [ ] https://github.com/weather-mcp/website
-- [ ] https://github.com/weather-mcp/.github
-- [ ] Old URL redirects: https://github.com/dgahagan/weather-mcp → new URL
+- [x] https://github.com/weather-mcp (Organization page)
+- [x] https://github.com/weather-mcp/weather-mcp (MCP Server)
+- [x] https://github.com/weather-mcp/analytics-server (Analytics Server)
+- [x] https://github.com/weather-mcp/website (Website)
+- [x] https://github.com/weather-mcp/.github (Organization profile)
+- [x] Old URL redirects: https://github.com/dgahagan/weather-mcp → https://github.com/weather-mcp/weather-mcp ✅
 
 ---
 
-## Phase 6: Update External Services
+## Phase 6: Update External Services ✅ COMPLETED
 
-### Services to Update
+> **Status:** Completed - All external integrations reviewed and updated
 
-1. **npm Package (if published):**
-   ```bash
-   # After transferring, republish with updated package.json
-   cd /home/dgahagan/work/personal/weather-mcp/weather-mcp
-   npm publish
-   ```
+### Actions Taken
+
+1. **npm Package (`@dangahagan/weather-mcp`):**
+   - ✅ **Decision:** Keep existing package name (no breaking changes)
+   - ✅ **Current version:** 1.6.1
+   - ✅ **Repository URLs:** Updated in package.json (Phase 5)
+   - ℹ️ **Next publish:** Will automatically show updated repository links
+   - 📝 **Note:** Existing installations continue to work without changes
 
 2. **Smithery Registry:**
-   - Update at: https://smithery.ai/dashboard
-   - New repository URL: `https://github.com/weather-mcp/mcp-server`
+   - ✅ **Removed:** Deleted `smithery.yaml` (not being used for this project)
+   - ✅ **Updated:** Registry submission documentation
+   - ✅ **Commits:** `fb30a21`, `478698f`
 
-3. **GitHub Actions Secrets:**
-   - Go to each repository's Settings → Secrets and variables → Actions
-   - Re-add any secrets that didn't transfer:
-     - `NOAA_USER_AGENT` (if used in CI)
-     - Any other API tokens or credentials
+3. **GitHub Actions:**
+   - ✅ **Verified:** No workflows exist (project doesn't use GitHub Actions)
+   - ✅ **Status:** N/A - nothing to update
 
 4. **Badges and Shields:**
-   - GitHub badges will automatically update
-   - Custom badges may need URL updates
+   - ✅ **MCP Registry Badge:** Uses `io.github.dgahagan/weather-mcp` (correct - MCP protocol identifier)
+   - ✅ **npm Badge:** Uses `@dangahagan/weather-mcp` (correct)
+   - ✅ **License Badge:** Working correctly
+   - ✅ **All badges functional**
 
 5. **External Documentation:**
-   - Update any external links or documentation
-   - Check if you've mentioned the repo URL anywhere else
+   - ✅ **All repository references updated** in Phase 5
+   - ✅ **Registry submission docs updated** to reflect smithery.yaml removal
+   - ✅ **No other external integrations found**
 
 ---
 
@@ -565,9 +578,9 @@ Before considering the migration complete, verify:
 - [x] Repository transferred to `weather-mcp/weather-mcp`
 - [x] Local git remote updated
 - [x] Can push and pull successfully
-- [ ] All URLs in code/docs updated (Phase 5)
-- [ ] GitHub Actions still working (if any) (Phase 5)
-- [ ] npm package links work (Phase 6)
+- [x] All URLs in code/docs updated (Phase 5) ✅
+- [x] GitHub Actions still working (N/A - no workflows exist) ✅
+- [x] npm package links work (Phase 6) ✅
 
 ### Analytics Server Repository
 - [x] Repository created at `weather-mcp/analytics-server`
@@ -588,14 +601,15 @@ Before considering the migration complete, verify:
 - [x] Organization README displays at https://github.com/weather-mcp
 - [x] Migration guide added to `.github/docs/`
 - [x] Workspace structure updated with `.github/` folder
+- [x] Discord link updated to actual server ✅
 - [ ] Organization description set (optional)
 - [x] Links to all repos work
 
 ### External Services
-- [ ] npm package updated (if published) (Phase 6)
-- [ ] Smithery registry updated (if registered) (Phase 6)
-- [ ] GitHub Actions secrets re-added (Phase 6)
-- [ ] Old URLs redirect correctly (verify in Phase 5)
+- [x] npm package reviewed (keeping `@dangahagan/weather-mcp`) ✅
+- [x] Smithery registry removed (smithery.yaml deleted) ✅
+- [x] GitHub Actions secrets (N/A - no workflows) ✅
+- [x] Old URLs redirect correctly ✅
 
 ---
 
@@ -721,17 +735,17 @@ If you encounter issues:
 
 ## Migration Progress
 
-**✅ Phases 1-4 Completed!**
+**✅ Phases 1-6 Completed!**
 
 - ✅ Phase 1: MCP Server Repository transferred to `weather-mcp/weather-mcp`
 - ✅ Phase 2: Analytics Server Repository created
 - ✅ Phase 3: Website Repository created
 - ✅ Phase 4: Organization Profile created (`.github` repo)
-- ⏳ Phase 5: Update Cross-Repository References (next)
-- ⏳ Phase 6: Update External Services
-- ⏳ Phase 7: Announce Migration
+- ✅ Phase 5: Update Cross-Repository References (all URLs updated)
+- ✅ Phase 6: Update External Services (npm, smithery, badges reviewed)
+- ⏳ Phase 7: Announce Migration (next - optional)
 
 ---
 
 **Last Updated:** 2025-11-11
-**Document Version:** 1.1 (Updated with completion status)
+**Document Version:** 1.2 (Phases 1-6 completed, ready for Phase 7)
