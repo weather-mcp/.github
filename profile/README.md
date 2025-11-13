@@ -8,9 +8,9 @@ Open-source weather data ecosystem for Claude Desktop and AI assistants.
 [![GitHub Stars](https://img.shields.io/github/stars/weather-mcp?style=social)](https://github.com/weather-mcp)
 [![Discord](https://img.shields.io/badge/Discord-Join-7289DA?logo=discord&logoColor=white)](https://discord.gg/SEBvEa3YXr)
 
-[MCP Server](https://github.com/weather-mcp/weather-mcp) • [Community](https://github.com/weather-mcp/weather-mcp/discussions) • [Discord](https://discord.gg/SEBvEa3YXr)
+[MCP Server](https://github.com/weather-mcp/weather-mcp) • [Website](https://weather-mcp.dev) • [Community](https://github.com/weather-mcp/weather-mcp/discussions) • [Discord](https://discord.gg/SEBvEa3YXr)
 
-**Coming Soon:** [Website](https://weather-mcp.dev) • [Dashboard](https://weather-mcp.dev/dashboard) • [Documentation](https://weather-mcp.dev/docs)
+**Live Now:** [Website](https://weather-mcp.dev) • **Coming Soon:** [Dashboard](https://weather-mcp.dev/dashboard)
 
 </div>
 
@@ -51,7 +51,7 @@ Open-source weather data ecosystem for Claude Desktop and AI assistants.
     </td>
     <td width="33%" align="center">
       <h3>📊 Analytics Server</h3>
-      <p><strong>Status:</strong> Planning</p>
+      <p><strong>Status:</strong> In Development</p>
       <p>Privacy-first analytics collection API</p>
       <p>
         <a href="https://github.com/weather-mcp/analytics-server">
@@ -65,7 +65,7 @@ Open-source weather data ecosystem for Claude Desktop and AI assistants.
     </td>
     <td width="33%" align="center">
       <h3>🌐 Website</h3>
-      <p><strong>Status:</strong> Planning</p>
+      <p><strong>Status:</strong> Live (v1.0.0)</p>
       <p>Public website and analytics dashboard</p>
       <p>
         <a href="https://github.com/weather-mcp/website">
@@ -73,6 +73,7 @@ Open-source weather data ecosystem for Claude Desktop and AI assistants.
         </a>
       </p>
       <p>
+        <a href="https://weather-mcp.dev">🌐 Visit Site</a> •
         <a href="https://github.com/weather-mcp/website">📖 Documentation</a> •
         <a href="https://github.com/weather-mcp/website/issues">🐛 Issues</a>
       </p>
@@ -210,8 +211,9 @@ We welcome contributions to any Weather MCP project!
 - ✅ Extensive testing and documentation
 
 ### Coming Soon (v1.7+)
-- 🚧 Analytics server deployment
-- 🚧 Public website and dashboard launch
+- ✅ Public website launched (weather-mcp.dev)
+- 🚧 Analytics server deployment (in development)
+- 🚧 Analytics dashboard launch
 - 🚧 Optional opt-in analytics for product improvement
 - 🚧 Additional weather providers (NWS, etc.)
 
@@ -240,7 +242,7 @@ We welcome contributions to any Weather MCP project!
 - **[GitHub Discussions](https://github.com/weather-mcp/weather-mcp/discussions)** - Ask questions, share ideas
 - **[Discord Server](https://discord.gg/SEBvEa3YXr)** - Real-time chat with the community
 - **[Twitter](https://twitter.com/weather_mcp)** - Updates and announcements
-- **[Community Showcase](https://weather-mcp.dev/community/showcase)** - See what others are building *(Coming Soon)*
+- **[Website](https://weather-mcp.dev)** - Official Weather MCP website
 
 ---
 
@@ -311,8 +313,8 @@ copies or substantial portions of the Software.
 
 ⭐ Star our repos • 🐛 Report bugs • 💡 Suggest features • 🤝 Contribute
 
-[MCP Server](https://github.com/weather-mcp/weather-mcp) • [Discussions](https://github.com/weather-mcp/weather-mcp/discussions) • [Discord](https://discord.gg/SEBvEa3YXr)
+[MCP Server](https://github.com/weather-mcp/weather-mcp) • [Website](https://weather-mcp.dev) • [Discussions](https://github.com/weather-mcp/weather-mcp/discussions) • [Discord](https://discord.gg/SEBvEa3YXr)
 
-**Coming Soon:** [Website](https://weather-mcp.dev) • [Dashboard](https://weather-mcp.dev/dashboard) • [Documentation](https://weather-mcp.dev/docs)
+**Live Now:** [Website](https://weather-mcp.dev) • **Coming Soon:** [Dashboard](https://weather-mcp.dev/dashboard)
 
 </div>
